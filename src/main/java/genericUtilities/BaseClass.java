@@ -34,7 +34,7 @@ public class BaseClass {
 	public static  WebDriver sdriver;
 	
 	@BeforeSuite
-	//(groups={"SmokeSuite","RegressionSutie"})
+	(groups={"SmokeSuite",""})
 	public void bsConfig() 
 	{
 		System.out.println("------Databse Connection successfull------");
@@ -47,7 +47,7 @@ public class BaseClass {
 		String URL = fUtil.readDataFromPropertyFile("url");
 		
 		
-		driver = new EdgeDriver(); //Base Browser
+		driver = new FirefoxDriver(); //Base Browser
 		
 		//For CrossBowser Execution
 //		if(ParameterValue.equals("edge"))
